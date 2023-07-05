@@ -49,6 +49,8 @@
                 <p class="banner_texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
                 <input type="search" class="banner_pesquisa" placeholder="Qual será sua próxima leitura?">
             </section>
+            <div class="swiper-pagination"></div>
+            <div class="carrossel">
             <section class="carrossel">
               <h2 class="carrossel_titulo">Novos lançamentos</h2>
                 <!-- Slider main container -->
@@ -61,18 +63,25 @@
                 <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre Portugal da AluraBooks"></div>
                 ...
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+            </div>
   
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
   
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
                 </div>
             </section>
             <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+            <script>
+                const swiper = new Swiper('.swiper', {
+                    spaceBetween: 10,
+                    slidesPerView: 3,
+                    pagination: {
+                        el: 'swiper-pagination',
+                        type:'bullets',
+                    },
+                });
+            </script>  
     </body>
 </html>
 
